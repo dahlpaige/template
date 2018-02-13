@@ -1,0 +1,117 @@
+/*
+
+File Name: style.less 
+Date: 02/05/18
+Programmer: Paige Dahl
+
+*/
+
+@import 'palette.less';
+@import 'mixins.less';
+
+/* ---------- Global ---------- */
+
+body {
+    font-family: 'PT Sans', sans-serif;
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+
+/* ----- Header ----- */
+
+header {
+    border-bottom: 1px solid @color1;
+    padding-top: 25px;
+    h1 {
+        text-align: center;
+        .headingFontAttributes(@color1;
+        2.1em);
+    }
+    .navbar {
+        background-color: @color3;
+        text-transform: uppercase;
+        ul {
+            li {
+                padding: 5px 25px;
+                text-align: center;
+            }
+        }
+        a {
+            color: @color5;
+            font-weight: bold;
+            &:visted {
+                color: white;
+            }
+            &:hover {
+                color: white;
+                background-color: @color2;
+                border-radius: 8px;
+            }
+        }
+    }
+}
+
+
+/* ----- Section ----- */
+
+section {
+    .containerFluid();
+    padding-top: 25px;
+    padding-bottom: 25px;
+    h2 {
+        .autoMargins();
+        .headingFontAttributes(@color1;
+        1.7em);
+    }
+    h3 {
+        padding-left: 10px;
+        .headingFontAttributes(@color1;
+        1.6em);
+    }
+    p {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
+
+
+/* ----- Footer ----- */
+
+footer {
+    .containerFluid();
+    border-top: 1px solid @color1;
+    padding-bottom: 25px;
+    h4 {
+        padding-top: 15px;
+        padding-bottom: 15px;
+        text-align: center;
+        background-color: @color3;
+        color: @color5;
+        width: 100%;
+    }
+    .col-sm-4 {
+        padding-left: 20px;
+    }
+    p {
+        .autoMargins();
+        font-weight: bold;
+    }
+    address {
+        font-weight: bold;
+    }
+    a {
+        color: @color1;
+        font-weight: bold;
+        &:visited {
+            color: @color2;
+        }
+        &:hover {
+            color: @color2;
+            text-decoration: none;
+        }
+    }
+}
